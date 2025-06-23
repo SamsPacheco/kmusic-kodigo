@@ -1,0 +1,42 @@
+[
+    {
+        "id":0,
+        "title": "Liked Songs",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750638527/liked-songs-640_tuplhm.jpg"
+    },
+    {
+        "id":1,
+        "title": "Discover Weekly",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750638527/dicover_p2fxjc.jpg"
+    },
+    {
+        "id":2,
+        "title": "Release Radar",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750639297/release_ybyhkh.jpg"
+    },
+    {
+        "id":3,
+        "title": "Standing Next To Me",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750639395/rick_uudkct.jpg"
+    },
+    {
+        "id":4,
+        "title": "Counting Stars",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750639516/couting_sztvqp.jpg"
+    },
+    {
+        "id":5,
+        "title": "Rolling in the Deep",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750639571/adele_r4nzp4.jpg"
+    },
+    {
+        "id":6,
+        "title": "Son Lux",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750639624/lux_epmjxj.jpg"
+    },
+    {
+        "id":7,
+        "title": "Wolf Like Me",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750639674/wolf_c1qngi.jpg"
+    }
+]

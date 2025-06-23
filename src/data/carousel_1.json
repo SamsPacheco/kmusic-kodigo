@@ -1,0 +1,42 @@
+[
+    {
+        "id":0,
+        "description": "Lazy slow lofi beats for laid-back moments.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750695425/_a97b138b-5ec2-453a-b18e-62700ab57deb_lr4vtv.jpg"
+    },
+    {
+        "id":1,
+        "description": "Banks, Sleepermane, Mr.Kafer, ron.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652936/_ed38e51b-4024-4c1e-b00b-89e7b8495e83_egseng.jpg"
+    },
+    {
+        "id":2,
+        "description": "A freash lofi spin on your favourite tunes.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652996/_0574ac3b-7903-44ca-86db-12b8daea47e5_bi3qk6.jpg"
+    },
+    {
+        "id":3,
+        "description": "Blissed out beats and head nodding grooves.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652519/_f85a9d19-e530-4cd4-bb16-edff2183a12e_aegkdo.jpg"
+    },
+    {
+        "id":4,
+        "description": "Beautiful beats for beautiful moments.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652518/_865e0f5b-c7b0-45e4-999e-c7c2d3844874_hyvcf7.jpg"
+    },
+    {
+        "id":5,
+        "description": "Beach vibeas and summer jams only.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652518/_b55582d9-b71c-498b-ba64-3dd67776de3a_uklxp7.jpg"
+    },
+    {
+        "id":6,
+        "description": "The ultimate chill out playlist",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652902/_772f91fc-e095-4a37-b093-5c354807d39d_gno5ym.jpg"
+    },
+    {
+        "id":7,
+        "description": "soothing beats to get in the flow",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652936/_5ff11bc2-e7a0-4254-b09e-857ea21e6c37_ecizmr.jpg"
+    }
+]

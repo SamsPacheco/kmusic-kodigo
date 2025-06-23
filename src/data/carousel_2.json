@@ -1,0 +1,42 @@
+[
+    {
+        "id":0,
+        "description": "Chill glow",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700010/_1341049a-247f-43cb-84e7-6c5dd1ed460b_mm0qmy.jpg"
+    },
+    {
+        "id":1,
+        "description": "Night Drive",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700077/_e6c46507-12a5-4f0b-9492-1a94aaae91ed_ilqkv7.jpg"
+    },
+    {
+        "id":2,
+        "description": "Sunset Loop",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700134/_48faa7a2-d469-4ccd-bca0-4baae218bdfe_d2ve89.jpg"
+    },
+    {
+        "id":3,
+        "description": "Lo-Fi Lens",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700209/_611af396-0b87-414a-843d-471ec002d730_zugpsh.jpg"
+    },
+    {
+        "id":4,
+        "description": "Cosmic Flow",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700305/_d8699c27-a8cc-477c-8359-b5176270a6d1_cnygzh.jpg"
+    },
+    {
+        "id":5,
+        "description": "City Pulse",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700400/_57faff14-d641-4b84-822c-ec32f94910df_fplknj.jpg"
+    },
+    {
+        "id":6,
+        "description": "Soft Frequencies",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700498/_9764f910-f2f3-4df0-a471-d14909671b75_hwzc60.jpg"
+    },
+    {
+        "id":7,
+        "description": "Echo Zone",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700558/_72c5542c-c499-4e4c-801d-6dda11352d39_rqdoyv.jpg"
+    }
+]

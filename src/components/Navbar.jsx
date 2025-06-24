@@ -5,7 +5,7 @@ export const Navbar = () => {
     <>
 
     {/* desktop */}
-      <nav className='h-full w-full text-white lg:grid lg:grid-cols-[1fr_550px_1fr] xl:grid grid-cols-[1fr_850px_1fr] gap-4 py-2 hidden'>
+      <nav className='h-full w-full text-white lg:grid lg:grid-cols-[1fr_550px_1fr] xl:grid-cols-[1fr_850px_1fr] gap-4 py-2 hidden'>
 
         <div className='flex items-center lg:pl-20 pl-32'>
           <i className="text-4xl uil uil-angle-left"></i>
@@ -18,16 +18,17 @@ export const Navbar = () => {
             <i className="uil uil-estate text-[28px] xl:text-[35px]"></i>
           </div>
 
+          {/* input - search */}
           <div className='bg-[#1f1f1f] flex items-center px-[10px] rounded-3xl flex-1 relative'>
             <div className='w-[90%] flex'>
               <i className="uil uil-search text-2xl"></i>
-              <input type="text" placeholder='What do you want to play?' className='bg-transparent px-3 w-[70%]' />
+              <input type="text" placeholder='What do you want to play?' className='bg-transparent px-3 w-[70%] outline-none' />
             </div>
 
             <span className='w-[1px] h-[60%] border border-[#6a6a6a]' />
 
-            <div className='absolute right-4 xl:right-6'>
-              <i className="uil uil-shopping-basket text-[28px] xl:text-[35px]"></i>
+            <div className='absolute right-4 xl:right-[32px]'>
+              <i className="uil uil-shopping-basket text-[28px] xl:text-[32px]"></i>
             </div>
           </div>
         </div>

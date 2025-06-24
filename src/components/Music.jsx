@@ -8,7 +8,7 @@ export const Music = () => {
 
   
   return (
-    <main className='p-5 rounded-md lg:bg-gradient-to-t from-[#121212] via-[#070707] to-[#1e1d1d]'>
+    <main className='p-5 rounded-md lg:bg-gradient-to-t from-[#121212] via-[#070707] to-[#2f2659]'>
       {/* all - Music - Podcast */}
       <section className='text-white lg:flex items-center gap-[6px] mb-5 hidden'>
         <span className='px-3 py-[6px] rounded-2xl bg-[#d3d4d5] text-black'>
@@ -23,8 +23,8 @@ export const Music = () => {
       </section>
       
     {/* recents */}
-    <section className='grid grid-cols-2 lg:grid-cols-4 gap-2 '>
-      {recents.map( (recent, index) => <article className='h-[70px] bg-[#292929] flex items-center gap-2 xl:gap-3 rounded-md' key={index}>
+    <section className='grid grid-cols-2 lg:grid-cols-4 gap-2 overflow-hidden'>
+      {recents.map( (recent, index) => <article className='h-[70px] bg-[#31303b] flex items-center gap-2 xl:gap-3 rounded-md' key={index}>
         <figure className='h-full'>
           <img src={recent.picture_url} alt="" className='w-full h-full object-contain rounded-md' />
         </figure>
@@ -35,7 +35,7 @@ export const Music = () => {
 
     {/* carrousels It's New Music! */}
 
-    <section className='mt-3 min-w-[100dvh]'>
+    <section className='mt-3 min-w-[100dvh] overflow-hidden'>
       <Carrousel carousel={carousel1} title="It's New Music!" />
     </section>
 

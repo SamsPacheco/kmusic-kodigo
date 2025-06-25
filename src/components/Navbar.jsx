@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   return (
@@ -15,7 +16,9 @@ export const Navbar = () => {
         <div className='flex justify-center gap-1 xl:gap-2'>
           {/* home button */}
           <div className='flex justify-center items-center rounded-full w-[55px] h-[55px] bg-[#1f1f1f]'>
-            <i className="uil uil-estate text-[28px] xl:text-[35px]"></i>
+            <Link to='/'>
+              <i className="uil uil-estate text-[28px] xl:text-[35px]"></i>            
+            </Link>
           </div>
 
           {/* input - search */}

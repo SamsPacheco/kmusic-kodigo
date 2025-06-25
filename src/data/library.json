@@ -1,0 +1,49 @@
+[
+    {
+        "id":0,
+        "title": "Liked Songs",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750638527/liked-songs-640_tuplhm.jpg"
+    },
+    {
+        "id":1,
+        "title": "Neon Drift",
+        "description": "Night beats in a city that never sleeps.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750876832/_274f0cc6-b371-4217-a8d8-0243ee374002_smznjf.jpg"
+    },
+    {
+        "id":2,
+        "title": "Dream Signal",
+        "description": "A lost signal in a dreamlike universe.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750876954/_85dcf810-5f7e-44a8-9ae3-401d77bf2634_h6xvdt.jpg"
+    },
+    {
+        "id":3,
+        "title": "Morning Phase",
+        "description": "Slow, soft and melancholic awakening.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750877242/_ce5132a7-3b1e-442f-b026-daf51ddadbeb_epiem5.jpg"
+    },
+    {
+        "id":4,
+        "title": "Static Rush",
+        "description": "Intense, electric rhythm, with digital energy.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750877297/_ecc332e2-e37d-4f1e-bfc5-5a2a06eb49d1_ysgtaj.jpg"
+    },
+    {
+        "id":5,
+        "title": "Orbit Mind",
+        "description": "Sounds that revolve around your thoughts.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750877347/_96b8a456-04c7-430d-a196-7c70f5b7f872_wsph94.jpg"
+    },
+    {
+        "id":6,
+        "title": "Echo Valley",
+        "description":"Instrumentals that resonate like natural echoes.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750877408/_058f8d11-4d00-4c16-95a7-a9c2b8252335_o4fjv1.jpg"
+    },
+    {
+        "id":7,
+        "title": "Grayscale Heart",
+        "description":"Deep ballads in muted tones.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750877473/_6837c321-2917-430c-8486-c32732bcecd5_sx9h6e.jpg"
+    }
+]

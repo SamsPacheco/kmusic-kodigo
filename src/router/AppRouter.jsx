@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AuthRouter } from '../auth/router/AuthRouter'
-import { HomePage } from '../pages/HomePage'
+import { HomePage, LibraryPage } from '../pages'
+
 
 export const AppRouter = () => {
   return (
@@ -10,6 +11,8 @@ export const AppRouter = () => {
 
         {/* homePage */}
         <Route path='/' element = { <HomePage /> } />
+        {/* library -> only movile */}
+        <Route path='/library' element = { <LibraryPage /> } />
 
         {/* si el usuario quier ir a alguna ruta y esta no esite  */}
         <Route path='/*' element = { <Navigate to = '/'/> } />

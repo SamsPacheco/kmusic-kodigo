@@ -1,0 +1,122 @@
+[
+  {
+    "id": 0,
+    "title": "Electric Fever",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886408/_76867020-37e1-4098-bb78-378a65985ecf_thpyyp.jpg",
+    "artis": "Nova Skye",
+    "album": "Voltage Dreams",
+    "dateAdded": "2023-08-14"
+  },
+  {
+    "id": 1,
+    "title": "Crystal Dunes",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886477/_33bc03ef-49eb-4f3b-a69b-415560776231_v7txgu.jpg",
+    "artis": "Lumen Rae",
+    "album": "Mirage World",
+    "dateAdded": "2022-11-02"
+  },
+  {
+    "id": 2,
+    "title": "Skybound Heart",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886537/_400349ae-fd4b-457c-baee-2cc04fa184ee_c1crkf.jpg",
+    "artis": "Eli North",
+    "album": "Weightless",
+    "dateAdded": "2021-03-27"
+  },
+  {
+    "id": 3,
+    "title": "Vapor Echo",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886592/_d9282acc-0c8b-4875-957f-1037bc9cbabb_fa3v0v.jpg",
+    "artis": "NeoRift",
+    "album": "System Bloom",
+    "dateAdded": "2024-01-18"
+  },
+  {
+    "id": 4,
+    "title": "Midnight Petals",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886655/_7e146f50-6185-491d-869d-deed6ac7831c_wvnrqh.jpg",
+    "artis": "Lysie",
+    "album": "Moonflower",
+    "dateAdded": "2022-06-04"
+  },
+  {
+    "id": 5,
+    "title": "Gravity Lines",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886722/_323ed22c-bdf4-4f72-b006-234234d8d93e_mdy77p.jpg",
+    "artis": "Axion Loop",
+    "album": "Field Zero",
+    "dateAdded": "2023-10-30"
+  },
+  {
+    "id": 6,
+    "title": "Sunset Logic",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886794/_68b7360c-50b7-403d-993e-198a1ded2830_x3cvn3.jpg",
+    "artis": "Cassetiq",
+    "album": "Binary Bloom",
+    "dateAdded": "2021-07-22"
+  },
+  {
+    "id": 7,
+    "title": "Neon Orchard",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750886959/_406dcba4-b667-446d-a97f-48832568265c_ra0ere.jpg",
+    "artis": "Synth Bloom",
+    "album": "Electric Flora",
+    "dateAdded": "2024-04-09"
+  },
+  {
+    "id": 8,
+    "title": "Cloudsteps",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750887011/_d1f00109-ffd3-4ec8-99e8-efa49e853441_zvykml.jpg",
+    "artis": "Amber Loop",
+    "album": "Soft Altitude",
+    "dateAdded": "2022-09-17"
+  },
+  {
+    "id": 9,
+    "title": "Static Bloom",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750887085/_fed9a88a-a4f9-474f-bb82-5980b0fe23c6_y7f8vq.jpg",
+    "artis": "Pixel Garden",
+    "album": "Floral Code",
+    "dateAdded": "2023-02-05"
+  },
+  {
+    "id": 10,
+    "title": "Dark Radiance",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750887146/_0f9b71df-cfb8-4cb4-b524-bbf2aa17015e_j1r5aq.jpg",
+    "artis": "Ion Veil",
+    "album": "Negative Light",
+    "dateAdded": "2021-12-12"
+  },
+  {
+    "id": 11,
+    "title": "Echo Threads",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750887248/_1564119e-8cbb-4f4c-bda4-02626d5e4994_abppy6.jpg",
+    "artis": "Tessela",
+    "album": "Signal Skin",
+    "dateAdded": "2023-06-18"
+  },
+  {
+    "id": 12,
+    "title": "Parallel Rain",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750887299/_3219311e-7d09-432b-b59d-f707eb229004_b801d4.jpg",
+    "artis": "Velvet Streets",
+    "album": "Dual Weather",
+    "dateAdded": "2022-03-29"
+  },
+  {
+    "id": 13,
+    "title": "Pulse Shift",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750887347/_2aa3c38d-9b51-4d45-9835-e579db73622d_mgvtco.jpg",
+    "artis": "EchoFrame",
+    "album": "Frequency Fade",
+    "dateAdded": "2023-11-08"
+  },
+  {
+    "id": 14,
+    "title": "Digital Mirage",
+    "photo_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750887409/_9bc2f1fa-7033-4ba9-9b26-52891c6ab10f_l4ft3s.jpg",
+    "artis": "Vision Path",
+    "album": "Code Oasis",
+    "dateAdded": "2024-05-12"
+  }
+]

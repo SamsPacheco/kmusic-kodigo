@@ -94,10 +94,10 @@ export const Footer = () => {
                     {/* line time - song */}
                     <div className='text-[#a5a5a5] grid grid-cols-[1fr_350px_1fr] lg:grid-cols-[1fr_850px_1fr]  place-items-center'>
                         <span>0:00</span>
-                        <div className='h-[2px] lg:h-[3px] w-full border border-[#959494] rounded-md flex items-center'>
+                        <div className='h-[2px] lg:h-[3px] w-full border border-[#959494] bg-[#959494] rounded-md flex items-center'>
                             <span className='w-[40%] h-[1px] lg:h-[2px] border border-white'></span>
                         </div>
-                        <span>4:49</span>
+                        <span>3:49</span>
                     </div>
                 </div>
 

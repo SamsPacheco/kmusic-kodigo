@@ -9,7 +9,7 @@ export const Music = () => {
 
   
   return (
-    <main className='p-5 rounded-md lg:bg-gradient-to-t from-[#121212] via-[#070707] to-[#2f2659]'>
+    <main className='p-5 rounded-md lg:bg-gradient-to-t from-[#121212] via-[#212020] to-[#1e1d1d]'>
       {/* all - Music - Podcast */}
       <section className='text-white lg:flex items-center gap-[6px] mb-5 hidden'>
         <span className='px-3 py-[6px] rounded-2xl bg-[#d3d4d5] text-black'>

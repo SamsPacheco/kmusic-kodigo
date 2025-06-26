@@ -52,7 +52,7 @@ export const Footer = () => {
             </section>
 
             {/* desktop footer */}
-            <section className='hidden w-full lg:grid grid-cols-[1fr_470px_1fr] lg:grid-cols-[1fr_950px_1fr] place-items-stretch gap-5 px-4 bg-[#121212]'>
+            <section className='hidden w-full lg:grid grid-cols-[1fr_470px_1fr] md:grid-cols-[1fr_500px_1fr] xl:grid-cols-[1fr_950px_1fr] place-items-stretch gap-5 px-4 bg-[#121212]'>
                 {/* song name */}
                 <div className='flex'>
                     <figure className='max-w-[70px] rounded-lg'>
@@ -92,7 +92,7 @@ export const Footer = () => {
                     </div>
 
                     {/* line time - song */}
-                    <div className='text-[#a5a5a5] grid grid-cols-[1fr_350px_1fr] lg:grid-cols-[1fr_850px_1fr]  place-items-center'>
+                    <div className='text-[#a5a5a5] grid grid-cols-[1fr_350px_1fr] md:grid-cols-[1fr_400px_1fr] xl:grid-cols-[1fr_850px_1fr]  place-items-center'>
                         <span>0:00</span>
                         <div className='h-[2px] lg:h-[3px] w-full border border-[#959494] bg-[#959494] rounded-md flex items-center'>
                             <span className='w-[40%] h-[1px] lg:h-[2px] border border-white'></span>
@@ -102,7 +102,7 @@ export const Footer = () => {
                 </div>
 
                 {/* icons - microphone - list - device - volume - chomercast and full screen */}
-                <div className='flex items-center justify-between xl:justify-end gap-4 pr-3'>
+                <div className='flex items-center justify-between xl:justify-end gap-3 pr-3'>
                     <span>
                         <img className='w-[20px]' src="https://res.cloudinary.com/dy6x06uoe/image/upload/v1750786345/microfono_upvykk.png" alt="microphone-icon" />
                     </span>

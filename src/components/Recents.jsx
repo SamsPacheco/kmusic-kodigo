@@ -14,8 +14,8 @@ export const Recents = () => {
             <img src={recent.picture_url} alt="" className='w-full h-full object-contain rounded-md' />
             </figure>
             <div>
-              <h2 className='text-[19px] pl-2'>{recent.title}</h2>
-              <p className='pl-2 text-sm text-[#dedddd]'>{recent.description}</p>
+              <h2 className='text-[16px] xl:text-[19px] pl-2'>{recent.title}</h2>
+              <p className='pl-2 text-[12px] xl:text-sm leading-3 xl:leading-5 text-[#dedddd] pr-3 '>{recent.description}</p>
             </div>
             </article>
         )

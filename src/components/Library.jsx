@@ -1,6 +1,3 @@
-import React from 'react'
-import recents from '../data/recents.json'
-import library from '../data/library.json'
 import { Recents } from './Recents'
 import { useLocation } from 'react-router-dom'
 
@@ -8,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 export const Library = () => {
   const location = useLocation();
   return (
-    <section className={`px-5 space-y-3 xl:bg-[#121212] rounded-md xl:px-[8px] ${ location.pathname !== '/library' ? 'hidden' : '' } xl:block`}>
+    <section className={`px-5 space-y-3 xl:bg-[#121212] rounded-md xl:px-[8px] ${ location.pathname === '/' && 'hidden' } xl:block`}>
       {/* library */}
       <section className='text-white pt-3 xl:p-5 space-y-5 xl:px-3 fixed top-0 left-0 right-0 px-4 lg:static bg-black h-28 xl:bg-[#121212]'>
         <article className='flex justify-between items-center'>

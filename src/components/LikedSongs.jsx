@@ -26,7 +26,7 @@ export const LikedSongs = () => {
               <img src="https://res.cloudinary.com/dy6x06uoe/image/upload/v1750890306/play-button_qpig73.png" alt="play-icon" />
             </span>
             <span className='w-[20px] xl:w-[30px]'>
-              <img src="https://res.cloudinary.com/dy6x06uoe/image/upload/v1750719390/simbolo-dibujado-a-mano-de-flechas-aleatoria_dvx9iu.png" alt="" />
+              <img src="https://res.cloudinary.com/dy6x06uoe/image/upload/v1750719390/simbolo-dibujado-a-mano-de-flechas-aleatoria_dvx9iu.png" alt="aleatory-icon" />
             </span>
             <i className="uil uil-arrow-circle-down text-[25px] xl:text-[35px] text-gray-400"></i>
           </article>

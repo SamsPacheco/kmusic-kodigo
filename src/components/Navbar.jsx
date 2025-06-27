@@ -1,12 +1,28 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import { UserAuth } from '../context/AuthContextProvider'
+import { useState } from 'react';
 
 export const Navbar = () => {
+
+  const {user, googleSingOut} = UserAuth();
+  const {displayName} = user;
+  const logoIcon = displayName ? displayName.slice(0, 1) : ''; // ya que tarda unos seg en cargar de firebase, validamos 
+
+  const [isActive, setIsActive] = useState(false);
+
+  // log out 
+  const handleGoogleLogOut = async () => {
+    try {
+      await googleSingOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
-
     {/* desktop */}
-      <nav className='h-full w-full text-white lg:grid lg:grid-cols-[1fr_550px_1fr] xl:grid-cols-[1fr_850px_1fr] gap-4 py-2 hidden'>
+      <nav className='h-full w-full text-white lg:grid lg:grid-cols-[1fr_550px_1fr] xl:grid-cols-[1fr_850px_1fr] gap-4 py-2 relative hidden'>
 
         <div className='flex items-center lg:pl-20 pl-32'>
           <i className="text-4xl uil uil-angle-left"></i>
@@ -36,22 +52,74 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <div className='flex items-center justify-end pr-12 gap-6'>
+        {/* bell - group & user profile */}
+        <div className='flex items-center justify-end gap-6 pr-5'>
           <i className="uil uil-bell text-[30px]"></i>
           <i className="uil uil-users-alt text-[30px]"></i>
 
           {/* debe de desplegar un drop con la info y log out */}
-          <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex  justify-center items-center cursor-pointer'>
-            <h1 className='text-2xl'>S</h1>
+          <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
+            {
+              displayName ?
+                
+                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
+
+                :
+
+                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}><i className="uil uil-user"></i></button>
+
+            }
+            <div className={`absolute w-[200px] h-[275px] py-4  right-5 top-[65px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
+                <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
+                <p className='cursor-pointer'>Profile</p>
+                <span className='flex justify-between cursor-pointer'>Support <i className="uil uil-external-link-alt"></i></span>
+                <p className='cursor-pointer'>Private Session</p>
+                <p className='cursor-pointer'>Settings</p>
+                <hr className='pb-3'/>
+                {
+                  displayName ? 
+                  <button onClick={googleSingOut}>log out</button>
+                  :
+                  <Link to='/auth/login'>Log In</Link>
+                }
+                
+            </div>
           </div>
         </div>
       </nav>
-
+    
+    {/* movile */}
       <nav className='text-white flex items-center gap-2 p-5 lg:hidden'>
-        <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex  justify-center items-center cursor-pointer'>
-          {/* extraer la primera letra del correo que ingresa */}
+        {/* <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex  justify-center items-center cursor-pointer'>
           <h1 className='text-2xl'>S</h1>
-        </div>
+        </div> */}
+        <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
+            {
+              displayName ?
+                
+                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
+
+                :
+
+                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}><i className="uil uil-user"></i></button>
+
+            }
+            <div className={`absolute w-[200px] h-[275px] py-4 left-5 top-[70px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
+                <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
+                <p className='cursor-pointer'>Profile</p>
+                <span className='flex justify-between cursor-pointer'>Support <i className="uil uil-external-link-alt"></i></span>
+                <p className='cursor-pointer'>Private Session</p>
+                <p className='cursor-pointer'>Settings</p>
+                <hr className='pb-3'/>
+                {
+                  displayName ? 
+                  <button onClick={googleSingOut}>log out</button>
+                  :
+                  <Link to='/auth/login'>Log In</Link>
+                }
+                
+            </div>
+          </div>
         <span className='px-3 py-[6px] rounded-2xl bg-[#3f5f95] text-white'>
           <p>All</p>
         </span>

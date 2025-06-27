@@ -1,7 +1,39 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { AuthLayout } from '../layout/AuthLayout'
+import { UserAuth } from '../../context/AuthContextProvider';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 export const LoginPage = () => {
+
+  const { googleSingIn, user } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleGoogleSingIn = async () => {
+    try {
+      await googleSingIn();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+    useEffect(() => {
+        if(!Object.keys(user).length > 0){
+          console.log('no hay login aun')
+        }else{
+          Swal.fire({
+            title: "Account successfully created",
+            icon: "success",
+            draggable: true,
+            background: '#1F1F1F',
+            color: "#fff",
+            confirmButtonColor: "#3f5f95"
+          });
+          navigate('/') 
+        }
+      
+      }, [user])
+
   return (
     <AuthLayout title='Log in to Kodigo Music' haveAccount="Don't have an account?" route='/auth/register' linkName='register in Kodigo Music'>
 
@@ -9,16 +41,16 @@ export const LoginPage = () => {
       <div className='font-semibold flex flex-col gap-2 lg:w-[65%] lg:mx-auto '>
 
         <div className='border border-[#313131] rounded-2xl py-3 relative bg-[#3f5f95] text-black lg:hidden'>
-          <i class="uil uil-envelope absolute text-3xl top-1 pt-1 left-2"></i>
+          <i className="uil uil-envelope absolute text-3xl top-1 pt-1 left-2"></i>
           <p>Continue with email</p>
         </div>
 
-        <div className='border border-[#313131] rounded-2xl py-3 relative text-whte'>
+        <button className='border border-[#313131] rounded-2xl py-3 relative text-whte' onClick={handleGoogleSingIn}>
           <figure className='w-[25px] absolute left-3'>
             <img src="https://res.cloudinary.com/dy6x06uoe/image/upload/v1750553575/google_lmglxf.svg" alt="" />
           </figure>
           <p>Continue with Google</p>
-        </div>
+        </button>
 
         <div className='border border-[#313131] rounded-2xl py-3 relative  text-white'>
           <figure className='w-[25px] absolute left-3'>

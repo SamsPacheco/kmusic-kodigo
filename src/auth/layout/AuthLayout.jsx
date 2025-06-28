@@ -19,7 +19,7 @@ export const AuthLayout = ({children, title = '', haveAccount = '', route = '', 
                 {/* have account -> login (route) else -> register (route*/}
                 <div className='mt-5 lg:flex justify-center items-center gap-2'>
                     <p>{haveAccount}</p>
-                    <Link className='font-bold pt-3 lg:pt-0 underline' to={route}>{linkName}</Link>
+                    <Link className='font-bold pt-3 lg:pt-0 underline cursor-pointer' to={route}>{linkName}</Link>
                 </div>
 
             </section>

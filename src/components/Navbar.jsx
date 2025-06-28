@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContextProvider'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Navbar = () => {
 
   const {user, googleSingOut} = UserAuth();
-  const {displayName} = user;
-  const logoIcon = displayName ? displayName.slice(0, 1) : ''; // ya que tarda unos seg en cargar de firebase, validamos 
+  console.log(user.displayName)
+  const logoIcon = Object.keys(user).length > 0 ? user.email.slice(0,1) : ""
+
+  
+  
+  console.log(logoIcon)
 
   const [isActive, setIsActive] = useState(false);
 
@@ -18,6 +22,7 @@ export const Navbar = () => {
       console.log(error);
     }
   };
+
 
   return (
     <>
@@ -60,7 +65,7 @@ export const Navbar = () => {
           {/* debe de desplegar un drop con la info y log out */}
           <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
             {
-              displayName ?
+              Object.keys(user).length > 0 ?
                 
                 <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
 
@@ -69,16 +74,16 @@ export const Navbar = () => {
                 <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}><i className="uil uil-user"></i></button>
 
             }
-            <div className={`absolute w-[200px] h-[275px] py-4  right-5 top-[65px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
+            <div className={`absolute w-[200px] h-[270px] py-4 right-5 top-[65px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
                 <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Profile</p>
                 <span className='flex justify-between cursor-pointer'>Support <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Private Session</p>
                 <p className='cursor-pointer'>Settings</p>
-                <hr className='pb-3'/>
+                <hr className={`${Object.keys(user).length > 0 ? '' : 'pb-4'}`}/>
                 {
-                  displayName ? 
-                  <button onClick={googleSingOut}>log out</button>
+                  Object.keys(user).length > 0 ? 
+                  <button onClick={handleGoogleLogOut}>log out</button>
                   :
                   <Link to='/auth/login'>Log In</Link>
                 }
@@ -90,12 +95,10 @@ export const Navbar = () => {
     
     {/* movile */}
       <nav className='text-white flex items-center gap-2 p-5 lg:hidden'>
-        {/* <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex  justify-center items-center cursor-pointer'>
-          <h1 className='text-2xl'>S</h1>
-        </div> */}
+
         <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
             {
-              displayName ?
+              Object.keys(user).length > 0 ?
                 
                 <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
 
@@ -110,9 +113,9 @@ export const Navbar = () => {
                 <span className='flex justify-between cursor-pointer'>Support <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Private Session</p>
                 <p className='cursor-pointer'>Settings</p>
-                <hr className='pb-3'/>
+                <hr className={`${Object.keys(user).length > 0 ? '' : 'pb-4'}`}/>
                 {
-                  displayName ? 
+                  Object.keys(user).length > 0 ? 
                   <button onClick={googleSingOut}>log out</button>
                   :
                   <Link to='/auth/login'>Log In</Link>

@@ -30,11 +30,11 @@ export const Music = () => {
 
     {/* carrousels It's New Music! */}
 
-    <section className='mt-3 min-w-[100dvh] overflow-hidden'>
+    <section className='mt-4 min-w-[100dvh] overflow-hidden'>
       <Carrousel carousel={carousel1} title="It's New Music!" />
     </section>
 
-    <section className='mt-3 min-w-[100dvh]'>
+    <section className='mt-4 min-w-[100dvh]'>
       <Carrousel carousel={carousel2} title="Your top mixes" />
     </section>
     

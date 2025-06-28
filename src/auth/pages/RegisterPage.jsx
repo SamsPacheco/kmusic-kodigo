@@ -43,21 +43,25 @@ export const RegisterPage = () => {
           <input 
             {...register("email", { pattern: /^[a-zA-Z0-9._%+-]+@gmail\.com$/ })} // validacion de un correo gmail
             type="text" placeholder='Enter your Email' name='email' 
-            className='bg-transparent border border-[#363434] min-w-[550px] p-2 rounded-lg focus:bg-black'
+            className='bg-transparent border border-[#363434] p-2 rounded-lg focus:bg-black min-w-[320px] lg:w-[450px]'
           />
           {errors.email && <p role="alert" className='text-sm text-red-400 text-start pt-[5px] px-2'>only gmail emails are accepted.</p>}
         </div>
 
-        <input 
-          {...register("password")} 
-          type="password" placeholder='Enter your Password' name='password' 
-          className='bg-transparent border border-[#363434] min-w-[550px] p-2 rounded-lg' 
-        />
+        <div>
+           <input 
+            {...register("password", { min: 6 })} 
+            type="password" placeholder='Enter your Password' name='password' 
+            className='bg-transparent border border-[#363434] p-2 rounded-lg min-w-[320px] lg:w-[450px]' 
+          />
+          {errors.password && <p role="alert" className='text-sm text-red-400 text-start pt-[5px] px-2'>password should be at least 6 characters long.</p>}
+        </div>
+
         <div>
         <input 
           {...register("displayName", { pattern: /^[a-zA-Z0-9_-]{8}$/ }, {require: true})} // validacion para 8 caracteres alfanumericos 
           type="text" placeholder='Enter your Username' name='displayName' 
-          className='bg-transparent border border-[#363434] min-w-[550px] p-2 rounded-lg' 
+          className='bg-transparent border border-[#363434] p-2 rounded-lg min-w-[320px] lg:w-[450px]' 
         />
         {errors.displayName && <p role="alert" className='text-sm text-red-400 text-start pt-[5px] px-2'>only 8 characters allowed.</p>}
         </div>

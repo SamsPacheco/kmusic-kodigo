@@ -1,7 +1,7 @@
-import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AuthRouter } from '../auth/router/AuthRouter'
 import { HomePage, LibraryPage } from '../pages'
+import { PrivateRoutes } from './PrivateRoutes'
 
 
 export const AppRouter = () => {
@@ -9,13 +9,21 @@ export const AppRouter = () => {
     <Routes>
         <Route path='/auth/*' element = { <AuthRouter /> } />
 
-        {/* homePage */}
-        <Route path='/' element = { <HomePage /> } />
-        {/* library -> only movile */}
-        <Route path='/library' element = { <LibraryPage /> } />
+        <Route path='/' element = { 
+          <PrivateRoutes>
+            <HomePage />
+          </PrivateRoutes>
+          }
+        />
 
-        {/* si el usuario quier ir a alguna ruta y esta no esite  */}
-        <Route path='/*' element = { <Navigate to = '/'/> } />
+        <Route path='/library' element = { 
+          <PrivateRoutes>
+            <LibraryPage />
+          </PrivateRoutes>
+          }
+        />
+
+        <Route path="*" element={<Navigate to="/" />} />
 
     </Routes>
   )

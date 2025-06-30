@@ -27,25 +27,32 @@ export const LoginPage = () => {
     loginWithEmailAndPassword(data);
   };
 
-    useEffect(() => {
-        if(!Object.keys(user).length > 0){
-          // console.log('no hay login aun'
-        }else{
-          Swal.fire({
-            title: "welcome to Kodigo Music",
-            imageUrl: 'https://res.cloudinary.com/dy6x06uoe/image/upload/v1750551640/icon_phm0sp.svg',
-            imageWidth: 150,
-            imageHeight: 150,
-            draggable: true,
-            background: '#1F1F1F',
-            color: "#fff",
-            confirmButtonColor: "#3f5f95",
 
-          });
-          navigate('/') 
-        }
+  // console.log('user :', user)
+  // if(user){
+  //     console.log('authenticated :',user.isLoged)
+  //   }
+
+  useEffect(() => {
+    if(user.isLoged === 'no-authenticated'){
+      // lo hay login 
+    }else{
+      Swal.fire({
+        title: "welcome to Kodigo Music",
+        imageUrl: 'https://res.cloudinary.com/dy6x06uoe/image/upload/v1750551640/icon_phm0sp.svg',
+        imageWidth: 150,
+        imageHeight: 150,
+        draggable: true,
+        background: '#1F1F1F',
+        color: "#fff",
+        confirmButtonColor: "#3f5f95",
+      });
+      navigate('/') 
+    }
+  }, [user])
+  
       
-      }, [user])
+
 
   return (
     <AuthLayout title='Log in to Kodigo Music' haveAccount="Don't have an account?" route='/auth/register' linkName='register in Kodigo Music'>
@@ -84,11 +91,6 @@ export const LoginPage = () => {
         <div className={`${isActive ? 'block' : 'hidden'} lg:block`}>
 
           <form className='mt-2 flex flex-col gap-2 items-center' onSubmit={handleSubmit(onSubmit)}>
-            {/* <div className='w-[90%]'>
-              <input {...register("email", { pattern: /^[a-zA-Z0-9._%+-]+@gmail\.com$/ })} type="text" placeholder='Enter your Email' name='email' className='bg-transparent border border-[#363434] w-full p-2 rounded-lg' />
-              {errors.email && <p role="alert" className='text-sm text-red-400 text-start pt-[5px] px-2'>only gmail emails are accepted.</p>}
-            </div> */}
-
             <div className='w-[90%]'>
               <input 
                 {...register("email", { pattern: /^[a-zA-Z0-9._%+-]+@gmail\.com$/ })} // validacion de un correo gmail

@@ -8,31 +8,29 @@ import Swal from 'sweetalert2';
 export const RegisterPage = () => {
 
   const navigate = useNavigate();
-
   const { register, handleSubmit, formState: { errors } } = useForm();
-
   const {registerWithEmailAndPassword, user} = UserAuth();
-
   const onSubmit = (data) => {
     registerWithEmailAndPassword(data);
   };
 
   useEffect(() => {
-      if(!Object.keys(user).length > 0){
-        console.log('no hay login aun')
-      }else{
-        Swal.fire({
-          title: "Account successfully created",
-          icon: "success",
-          draggable: true,
-          background: '#1F1F1F',
-          color: "#fff",
-          confirmButtonColor: "#3f5f95"
-        });
-        navigate('/') 
-      }
-    
-    }, [user])
+     if(user.isLoged === 'no-authenticated'){
+      //  no hay login 
+     }else{
+       Swal.fire({
+         title: "welcome to Kodigo Music",
+         imageUrl: 'https://res.cloudinary.com/dy6x06uoe/image/upload/v1750551640/icon_phm0sp.svg',
+         imageWidth: 150,
+         imageHeight: 150,
+         draggable: true,
+         background: '#1F1F1F',
+         color: "#fff",
+         confirmButtonColor: "#3f5f95",
+       });
+       navigate('/') 
+     }
+   }, [user])
   
   return (
     <AuthLayout title='subscribe to kodigo Music' haveAccount='Do you have an account?' route='/auth/login' linkName='log in to Kodigo Music'>

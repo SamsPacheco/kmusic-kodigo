@@ -2,7 +2,7 @@ import React from 'react'
 import musicList from '../data/likedSongs.json'
 export const LikedSongs = () => {
   return (
-    <main className='rounded-md lg:bg-gradient-to-t from-[#121212] via-[#191919] to-[#262f59] hidden lg:block h-screen  overflow-y-scroll'>
+    <section className='rounded-md lg:bg-gradient-to-t from-[#121212] via-[#191919] to-[#262f59] hidden lg:block h-screen  overflow-y-scroll'>
 
       {/* header "" */}
       <section className='flex items-end gap-5 p-8'>
@@ -76,6 +76,6 @@ export const LikedSongs = () => {
         </section>
       </section>
 
-    </main>
+    </section>
   )
 }

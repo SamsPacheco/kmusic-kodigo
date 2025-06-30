@@ -1,0 +1,43 @@
+[
+    {
+        "id":0,
+        "description": "Beach vibeas and summer jams only.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652518/_b55582d9-b71c-498b-ba64-3dd67776de3a_uklxp7.jpg"
+    },
+    {
+        "id":1,
+        "description": "The ultimate chill out playlist",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652902/_772f91fc-e095-4a37-b093-5c354807d39d_gno5ym.jpg"
+    },
+    {
+        "id":2,
+        "description": "Sunset Loop",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700134/_48faa7a2-d469-4ccd-bca0-4baae218bdfe_d2ve89.jpg"
+    },
+    {
+        "id":3,
+        "description": "Chill glow",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700010/_1341049a-247f-43cb-84e7-6c5dd1ed460b_mm0qmy.jpg"
+        
+    },
+    {
+        "id":4,
+        "description": "Beautiful beats for beautiful moments.",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652518/_865e0f5b-c7b0-45e4-999e-c7c2d3844874_hyvcf7.jpg"
+    },
+    {
+        "id":5,
+        "description": "Lo-Fi Lens",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700209/_611af396-0b87-414a-843d-471ec002d730_zugpsh.jpg"
+    },
+    {
+        "id":6,
+        "description": "Night Drive",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750700077/_e6c46507-12a5-4f0b-9492-1a94aaae91ed_ilqkv7.jpg"
+    },
+    {
+        "id":7,
+        "description": "soothing beats to get in the flow",
+        "picture_url": "https://res.cloudinary.com/dy6x06uoe/image/upload/v1750652936/_5ff11bc2-e7a0-4254-b09e-857ea21e6c37_ecizmr.jpg"
+    }
+]

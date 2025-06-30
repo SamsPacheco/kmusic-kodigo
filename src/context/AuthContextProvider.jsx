@@ -1,18 +1,28 @@
 import {useContext, createContext, useState, useEffect} from 'react'
 import { GoogleAuthProvider,  signOut, onAuthStateChanged, signInWithPopup, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import { FirebaseAuth } from '../../firebase/firebaseConfig';
-import Swal from 'sweetalert2';
+
 
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
 
-    const [user, setUser] = useState({}) // datos de la persona que se registro 
+    const [user, setUser] = useState({
+        "email": null,
+        "displayName": null,
+        "isLoged": 'no-authenticated' 
+    }) 
     
 
     const googleSingIn = () => { // login with google
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(FirebaseAuth, provider);
+
+        try {
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(FirebaseAuth, provider);
+        } catch (error) {
+            console.log('error :',error)
+        }
+
     }
 
     const googleSingOut = async() => { // log out with google
@@ -24,7 +34,7 @@ export const AuthContextProvider = ({children}) => {
         try {
             const {email, password, displayName} = data;
             await createUserWithEmailAndPassword(FirebaseAuth, email, password);
-            // console.log('displayName ',displayName)
+            console.log('displayName ',displayName)
             await updateProfile(FirebaseAuth.currentUser, { displayName }) // actualizamos el usuario para agg el displayName
 
         } catch (error) {
@@ -33,10 +43,12 @@ export const AuthContextProvider = ({children}) => {
     }
 
     const loginWithEmailAndPassword = ({email, password}) => { // login with email 
-        // console.log(email, password)
+        setUser({
+                ...user,
+                "isLoged": 'starting-authentication'
+            })
          signInWithEmailAndPassword(FirebaseAuth, email, password)
             .then((userCredential) => {
-                console.log('login')
                 // Signed in 
                 const user = userCredential.user;
                 console.log(user)
@@ -61,10 +73,18 @@ export const AuthContextProvider = ({children}) => {
         const suscribed = onAuthStateChanged( FirebaseAuth, (currentUser) => {
             if(!currentUser){
                 // console.log("no hay usuario suscrito")
-                setUser('')
+                setUser({
+                    "email": null,
+                    "displayName": null,
+                    "isLoged": 'no-authenticated'
+                })
             }else{
                 // console.log('usuario actual: ',currentUser);
-                setUser(currentUser);
+                setUser({
+                    "email": currentUser.email,
+                    "displayName": currentUser.displayName,
+                    "isLogged": "authenticated"
+                });
             }
             
             

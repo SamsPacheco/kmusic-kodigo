@@ -1,17 +1,11 @@
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContextProvider'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export const Navbar = () => {
 
   const {user, googleSingOut} = UserAuth();
-  console.log(user.displayName)
-  const logoIcon = Object.keys(user).length > 0 ? user.email.slice(0,1) : ""
-
-  
-  
-  console.log(logoIcon)
-
+  const logoIcon = user.email ? user.email.slice(0,1) : ""
   const [isActive, setIsActive] = useState(false);
 
   // log out 
@@ -62,32 +56,16 @@ export const Navbar = () => {
           <i className="uil uil-bell text-[30px]"></i>
           <i className="uil uil-users-alt text-[30px]"></i>
 
-          {/* debe de desplegar un drop con la info y log out */}
           <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
-            {
-              Object.keys(user).length > 0 ?
-                
-                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
-
-                :
-
-                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}><i className="uil uil-user"></i></button>
-
-            }
+            <button  className='text-2xl flex pb-1' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
             <div className={`absolute w-[200px] h-[270px] py-4 right-5 top-[65px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
                 <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Profile</p>
                 <span className='flex justify-between cursor-pointer'>Support <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Private Session</p>
                 <p className='cursor-pointer'>Settings</p>
-                <hr className={`${Object.keys(user).length > 0 ? '' : 'pb-4'}`}/>
-                {
-                  Object.keys(user).length > 0 ? 
-                  <button onClick={handleGoogleLogOut}>log out</button>
-                  :
-                  <Link to='/auth/login'>Log In</Link>
-                }
-                
+                <hr/>
+                <button onClick={handleGoogleLogOut}>log out</button>
             </div>
           </div>
         </div>
@@ -97,30 +75,15 @@ export const Navbar = () => {
       <nav className='text-white flex items-center gap-2 p-5 lg:hidden'>
 
         <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
-            {
-              Object.keys(user).length > 0 ?
-                
-                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
-
-                :
-
-                <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}><i className="uil uil-user"></i></button>
-
-            }
+            <button  className='text-2xl pb-1' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
             <div className={`absolute w-[200px] h-[275px] py-4 left-5 top-[70px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
                 <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Profile</p>
                 <span className='flex justify-between cursor-pointer'>Support <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Private Session</p>
                 <p className='cursor-pointer'>Settings</p>
-                <hr className={`${Object.keys(user).length > 0 ? '' : 'pb-4'}`}/>
-                {
-                  Object.keys(user).length > 0 ? 
-                  <button onClick={googleSingOut}>log out</button>
-                  :
-                  <Link to='/auth/login'>Log In</Link>
-                }
-                
+                <hr/>
+                <button onClick={googleSingOut}>log out</button>
             </div>
           </div>
         <span className='px-3 py-[6px] rounded-2xl bg-[#3f5f95] text-white'>

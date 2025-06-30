@@ -7,12 +7,8 @@ export const AuthRouter = () => {
   return (
     <Routes>
 
-        <Route path='/login' element = { <LoginPage/>} />
-        <Route path='/register' element = { <RegisterPage/>} />
-
-
-        {/* para que no ingrese rutas manuales que no existen */}
-        {/* <Route path='/*' element = { <Navigate to = '/auth/login'/>} /> */}
+        <Route path='login' element = { <LoginPage/>} />
+        <Route path='register' element = { <RegisterPage/>} />
 
     </Routes>
   )

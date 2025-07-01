@@ -10,6 +10,7 @@ export const RegisterPage = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
   const {registerWithEmailAndPassword, user} = UserAuth();
+  
   const onSubmit = (data) => {
     registerWithEmailAndPassword(data);
   };
@@ -48,7 +49,7 @@ export const RegisterPage = () => {
 
         <div>
            <input 
-            {...register("password", { min: 6 })} 
+            {...register("password", { minLength: 6})} 
             type="password" placeholder='Enter your Password' name='password' 
             className='bg-transparent border border-[#363434] p-2 rounded-lg min-w-[320px] lg:w-[450px]' 
           />
@@ -57,11 +58,11 @@ export const RegisterPage = () => {
 
         <div>
         <input 
-          {...register("displayName", { pattern: /^[a-zA-Z0-9_-]{8}$/ }, {require: true})} // validacion para 8 caracteres alfanumericos 
+          {...register("displayName", { minLength: 8 }, {require: true})} // validacion para 8 caracteres alfanumericos 
           type="text" placeholder='Enter your Username' name='displayName' 
           className='bg-transparent border border-[#363434] p-2 rounded-lg min-w-[320px] lg:w-[450px]' 
         />
-        {errors.displayName && <p role="alert" className='text-sm text-red-400 text-start pt-[5px] px-2'>only 8 characters allowed.</p>}
+        {errors.displayName && <p role="alert" className='text-sm text-red-400 text-start pt-[5px] px-2'>must contain at least 8 characters.</p>}
         </div>
 
         <button className='min-w-[250px] mx-auto bg-[#3f5f95] py-2 rounded-2xl mt-2'>Create Account</button>

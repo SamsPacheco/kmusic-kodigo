@@ -28,11 +28,6 @@ export const LoginPage = () => {
   };
 
 
-  // console.log('user :', user)
-  // if(user){
-  //     console.log('authenticated :',user.isLoged)
-  //   }
-
   useEffect(() => {
     if(user.isLoged === 'no-authenticated'){
       // lo hay login 

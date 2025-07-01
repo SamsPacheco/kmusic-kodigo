@@ -21,12 +21,12 @@ export const Library = () => {
   return (
     <section className={`px-5 space-y-3 xl:bg-[#121212] rounded-md xl:px-[8px] ${ location.pathname === '/' && 'hidden' } xl:block`}>
       {/* library */}
-      <section className='text-white pt-3 xl:p-5 space-y-5 xl:px-3 fixed top-0 left-0 right-0 px-4 lg:static bg-black h-28  xl:bg-[#121212] mt-2'>
+      <section className='text-white pt-[15px] xl:p-5 space-y-5 xl:px-3 fixed top-0 left-0 right-0 px-4 lg:static bg-black h-28  xl:bg-[#121212]'>
         <article className='flex justify-between items-center'>
           <div className='flex gap-3 justify-start items-center'>
             <div className='text-white flex items-center gap-2 lg:hidden'>
               <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center pb-1'>
-                  <button  className='text-2xl' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
+                  <button  className='text-[28px] flex justify-center items-center w-full h-full' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
                   <div className={`absolute w-[200px] h-[275px] py-4 left-5 top-[70px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
                       <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
                       <p className='cursor-pointer'>Profile</p>
@@ -57,7 +57,7 @@ export const Library = () => {
       </section>
 
       {/* recent icon */}
-      <section className='h-screen md:h-auto lg:pt-0 pt-[100px] space-y-3 lg:px-2 overflow-y-scroll pb-[170px] md:pb-[98px] lg:pb-0 lg:overflow-auto '>
+      <section className='h-screen md:h-auto lg:pt-0 pt-[90px] space-y-3 lg:px-2 overflow-y-scroll pb-[170px] md:pb-[98px] lg:pb-0 lg:overflow-auto '>
         <div className='flex justify-between items-center px-3 lg:hidden'>
         <span className='tracking-tighter'>
           <i className="uil uil-arrow-down text-2xl"></i>

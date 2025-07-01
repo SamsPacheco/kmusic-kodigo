@@ -57,7 +57,7 @@ export const Navbar = () => {
           <i className="uil uil-users-alt text-[30px]"></i>
 
           <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
-            <button  className='text-2xl flex pb-1' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
+            <button  className='text-2xl flex justify-center items-center pb-1 w-full h-full' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
             <div className={`absolute w-[200px] h-[270px] py-4 right-5 top-[65px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
                 <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Profile</p>
@@ -75,7 +75,7 @@ export const Navbar = () => {
       <nav className='text-white flex items-center gap-2 p-5 lg:hidden'>
 
         <div className='w-10 h-10 rounded-full bg-[#3f5f95] flex justify-center items-center'>
-            <button  className='text-2xl pb-1' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
+            <button  className='text-[28px] flex justify-center items-center pb-1 w-full h-full' onClick={() => !isActive ? setIsActive(true) : setIsActive(false)}>{ logoIcon }</button>
             <div className={`absolute w-[200px] h-[275px] py-4 left-5 top-[70px] bg-[#2d2d2d] p-4 space-y-4 rounded-lg  ${isActive ? 'block' : 'hidden'}`}>
                 <span className='flex justify-between cursor-pointer'>Account <i className="uil uil-external-link-alt"></i></span>
                 <p className='cursor-pointer'>Profile</p>

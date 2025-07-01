@@ -7,7 +7,7 @@ import { AuthContextProvider } from './context/AuthContextProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <AuthContextProvider>
+     <AuthContextProvider> 
         <BrowserRouter>
           <KmusicApp/>
         </BrowserRouter>

@@ -52,3 +52,10 @@ Se integró un sistema de autenticación con **Firebase Authentication**:
 
 ---
 
+## 📦 Producción y despliegue
+
+La aplicación está desplegada en un entorno de producción usando hosting gratuito.  
+🔗 [Ver aplicación en vivo](https://kmusic-kodigo.vercel.app/)  
+
+---
+
